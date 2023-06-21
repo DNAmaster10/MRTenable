@@ -10,7 +10,7 @@
     //Check that answer exists
 
     //Get the current round
-    $stmt = $conn->preare("SELECT currentRound FROM game");
+    $stmt = $conn->prepare("SELECT currentRound FROM game");
     $stmt->execute();
     $stmt->bind_result($result);
     $stmt->fetch();
