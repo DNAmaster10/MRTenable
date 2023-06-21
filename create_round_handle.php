@@ -69,52 +69,52 @@
 
     //Add answers
     //round, answerNum, answer, hidden
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 1, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 1, ?, 1)");
     $stmt->bind_param("s", $_POST["answer1"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 2, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 2, ?, 1)");
     $stmt->bind_param("s", $_POST["answer2"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 3, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 3, ?, 1)");
     $stmt->bind_param("s", $_POST["answer3"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 4, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 4, ?, 1)");
     $stmt->bind_param("s", $_POST["answer4"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 5, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 5, ?, 1)");
     $stmt->bind_param("s", $_POST["answer5"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 6, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 6, ?, 1)");
     $stmt->bind_param("s", $_POST["answer6"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 7, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 7, ?, 1)");
     $stmt->bind_param("s", $_POST["answer7"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 8, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 8, ?, 1)");
     $stmt->bind_param("s", $_POST["answer8"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 9, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 9, ?, 1)");
     $stmt->bind_param("s", $_POST["answer9"]);
     $stmt->execute();
     $stmt->close();
 
-    $stmt = $conn->prepare("INSERT INTO rounds ($id, 10, ?, 1) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO rounds (round, answerNum, answer, hidden) VALUES ($id, 10, ?, 1)");
     $stmt->bind_param("s", $_POST["answer10"]);
     $stmt->execute();
     $stmt->close();
