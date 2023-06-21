@@ -32,7 +32,8 @@
 
     //Update the answer
 
-    $stmt = $conn->prepare("UPDATE rounds SET hidden=0");
+    $stmt = $conn->prepare("UPDATE rounds SET hidden=0 WHERE round=? AND answerNum=?");
+    $stmt->bind_param("ii", $currentRound, $_GET["answer"]);
     $stmt->execute();
     $stmt->close();
 ?>
