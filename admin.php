@@ -1,5 +1,5 @@
 <?php
-    sessin_start();
+    session_start();
     include $_SERVER["DOCUMENT_ROOT"]."/dbh.php";
     include $_SERVER["DOCUMENT_ROOT"]."/check_login.php";
 
