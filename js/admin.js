@@ -71,3 +71,5 @@ function getAnswers() {
         }
     });
 }
+
+getAnswers();
