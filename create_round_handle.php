@@ -61,5 +61,70 @@
     }
 
     //We now know all values are set. Create the round.
-    
+    $stmt = $conn->prepare("INSERT INTO questions (question) VALUES (?)");
+    $stmt->bind_param("s", $_POST["question"]);
+    $stmt->execute();
+    $id = mysqli_insert_id($conn);
+    $stmt->close();
+
+    //Add answers
+    //round, answerNum, answer, hidden
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 1, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer1"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 2, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer2"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 3, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer3"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 4, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer4"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 5, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer5"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 6, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer6"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 7, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer7"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 8, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer8"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 9, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer9"]);
+    $stmt->execute();
+    $stmt->close();
+
+    $stmt = $conn->prepare("INSERT INTO rounds ($id, 10, answer, 1) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("s", $_POST["answer10"]);
+    $stmt->execute();
+    $stmt->close();
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Done!</title>
+    </head>
+    <body>
+        <p>Done!</p>
+    </body>
+</html>

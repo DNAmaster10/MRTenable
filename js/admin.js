@@ -42,6 +42,32 @@ function reset() {
 
 }
 
+function revealAnswer(answer) {
+    $.ajax({
+        url: "/handle/revealAnswer.php",
+        type: "GET",
+        data: {answer:answer}
+    });
+}
+function hideAnswer(answer) {
+    $.ajax({
+        url: "/handle/hideAnswer.php",
+        type: "GET",
+        data: {answer:answer}
+    });
+}
+
 function getAnswers() {
-    
+    $.ajax({
+        url: "/handle/getAnswersAdmin.php",
+        type: "POST",
+        success: function(data) {
+            splitData = data.split("#-#")
+            for (var i = 0; i < splitData.length; i++) {
+                finalData = splitData.split("---");
+                document.getElementById("answer_" + finalData[0] + "_container").classList.add(finalData[2]);
+                document.getElementById("answer_" + finalData[0]).innerHTML = finalData[1];
+            }           
+        }
+    });
 }

@@ -20,7 +20,7 @@
     $stmt->execute();
     $result = $stmt->get_result();
     while($row = $result->fetch_assoc()) {
-        $return_string += ($row["answerNum"] + "---" + $row["answer"] + "---" + $row["hidden"] + "#-#");
+        $return_string += ($row["answerNum"]."---".$row["answer"]."---".$row["hidden"]."#-#");
     }
 
     echo($return_string);
