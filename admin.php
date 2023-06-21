@@ -17,6 +17,7 @@
 <html>
     <head>
         <title>Admin Page</title>
+        <link rel="stylesheet" href="/css/admin.css">
     </head>
     <body>
         <div id="main_container">
