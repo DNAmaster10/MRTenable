@@ -64,7 +64,7 @@ function getAnswers() {
         success: function(data) {
             splitData = data.split("#-#")
             for (var i = 0; i < splitData.length; i++) {
-                finalData = splitData.split("---");
+                finalData = splitData[i].split("---");
                 document.getElementById("answer_" + finalData[0] + "_container").classList.add(finalData[2]);
                 document.getElementById("answer_" + finalData[0]).innerHTML = finalData[1];
             }           
