@@ -44,5 +44,5 @@
         die();
     }
     $_SESSION["username"] = $_POST["username"];
-    header("Location: /admin.php");
+    header("Location: /admin_home.php");
 ?>
