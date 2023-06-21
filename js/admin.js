@@ -62,7 +62,8 @@ function getAnswers() {
         url: "/handle/getAnswersAdmin.php",
         type: "POST",
         success: function(data) {
-            splitData = data.split("#-#")
+            console.log("Returned: " + data);
+            splitData = data.split("#-#");
             for (var i = 0; i < splitData.length; i++) {
                 finalData = splitData[i].split("---");
                 document.getElementById("answer_" + finalData[0] + "_container").classList.add(finalData[2]);
