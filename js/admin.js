@@ -49,10 +49,10 @@ function revealAnswer(answer) {
         data: {answer:answer},
         success: function(data) {
             if (data == "0") {
-                document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
+                document.getElementById("answer_" + answer + "_container").classList.add("shown");
             }
             else if (data == "1") {
-                document.getElementById("answer_" + finalData[0] + "_container").classList.add("hidden");
+                document.getElementById("answer_" + answer + "_container").classList.add("hidden");
             }
         }
     });
@@ -64,10 +64,10 @@ function hideAnswer(answer) {
         data: {answer:answer},
         success: function(data) {
             if (data == "0") {
-                document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
+                document.getElementById("answer_" + answer + "_container").classList.add("shown");
             }
             else if (data == "1") {
-                document.getElementById("answer_" + finalData[0] + "_container").classList.add("hidden");
+                document.getElementById("answer_" + answer + "_container").classList.add("hidden");
             }
         }
     });
