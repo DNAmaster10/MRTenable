@@ -8,13 +8,13 @@ function getAnswers() {
                 finalData = splitData[i].split("---");
                 if (finalData[2] == "1") {
                     document.getElementById("answer_" + finalData[0]).innerHTML = "";
-                    document.getElementById("answer_" + finalData[0] + "_container").classList.remove("shown");
-                    document.getElementById("answer_" + finalData[0] + "_container").classList.add("hidden");
+                    document.getElementById("answer_container_" + finalData[0]).classList.remove("shown");
+                    document.getElementById("answer_container_" + finalData[0]).classList.add("hidden");
                 }
                 else {
                     document.getElementById("answer_" + finalData[0]).innerHTML = finalData[1];
-                    document.getElementById("answer_" + finalData[0] + "_container").classList.remove("hidden");
-                    document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
+                    document.getElementById("answer_container_" + finalData[0]).classList.remove("hidden");
+                    document.getElementById("answer_container_" + finalData[0]).classList.add("shown");
                 }
             }
         }
