@@ -16,10 +16,10 @@
     $returnString = "";
     while ($row = $result->fetch_assoc()) {
         if ($row["hidden"] == 1) {
-            $returnString += $row["answerNum"]."---hidden---".$row["hidden"]."#-#";
+            $returnString .= $row["answerNum"]."---hidden---".$row["hidden"]."#-#";
         }
         else {
-            $returnString += $row["answerNum"]."---".$row["answer"]."---".$row["hidden"]."#-#";
+            $returnString .= $row["answerNum"]."---".$row["answer"]."---".$row["hidden"]."#-#";
         }
     }
     echo ($returnString);
