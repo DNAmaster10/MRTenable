@@ -27,7 +27,7 @@
                 <button id="decrement_round" onclick="decrementRound()">Decrement Round</button>
             </div>
             <div id="game_container">
-                <button id="wrong_answer_button">Wrong answer!</button>
+                <button id="wrong_answer_button" onclick="flashWrong()">Wrong answer!</button>
                 <div id="answers_container">
                     <div id="answer_1_container" class="answer_container">
                         <button id="answer_1_button" class="answer_button" onclick="revealAnswer(1)" value="1">Reveal</button>

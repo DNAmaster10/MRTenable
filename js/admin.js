@@ -38,8 +38,11 @@ function decrementRound() {
         }
     });
 }
-function reset() {
-
+function flashWrong() {
+    $.ajax({
+        url: "/handle/wrongAnswer.php",
+        type: "GET"
+    });
 }
 
 function revealAnswer(answer) {

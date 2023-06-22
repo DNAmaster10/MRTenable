@@ -47,16 +47,12 @@ getQuestion();
 getAnswers();
 checkWrong();
 
-var time = 1;
 function timeLoop() {
     setTimeout(function() {
         getQuestion();
         getAnswers();
         checkWrong();
-        time++;
-        if (time < 10) {
-            timeLoop();
-        }
+        timeLoop();
     }, 500)
 }
 
