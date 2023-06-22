@@ -48,6 +48,10 @@ function revealAnswer(answer) {
         type: "GET",
         data: {answer:answer},
         success: function(data) {
+            if (data == "error") {
+                return;
+            }
+            document.getElementById("answer_" + answer + "_container").className = "";
             if (data == "0") {
                 document.getElementById("answer_" + answer + "_container").classList.add("shown");
             }
@@ -63,6 +67,10 @@ function hideAnswer(answer) {
         type: "GET",
         data: {answer:answer},
         success: function(data) {
+            if (data == "error") {
+                return;
+            }
+            document.getElementById("answer_" + answer + "_container").className = "";
             if (data == "0") {
                 document.getElementById("answer_" + answer + "_container").classList.add("shown");
             }

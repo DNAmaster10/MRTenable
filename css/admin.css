@@ -1,6 +1,6 @@
 .shown {
-
+    background-color: lightgreen;
 }
 .hidden {
-    
+    background-color: lightpink;
 }
