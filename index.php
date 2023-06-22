@@ -5,6 +5,7 @@
 <html>
     <head>
         <title>MRTenable</title>
+        <link rel="stylesheet" href="/css/index.css">
     </head>
     <div id="main_container">
         <h1 id="header_text">Tenable Answers</title>
