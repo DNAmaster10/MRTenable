@@ -34,6 +34,7 @@ function checkWrong() {
         url: "/handle/checkWrong.php",
         type: "GET",
         success: function data() {
+            console.log(data);
             if (data == "1") {
                 document.getElementById("main_container").classList.add("wrong");
             }

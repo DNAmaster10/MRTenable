@@ -20,7 +20,7 @@
     $stmt->close();
 
     //Wait for 2 seconds.
-    sleep(2);
+    sleep(3);
 
     $stmt = $conn->prepare("UPDATE game SET shouldFlashWrong=0");
     $stmt->execute();
