@@ -3,7 +3,7 @@
     include $_SERVER["DOCUMENT_ROOT"]."/dbh.php";
     include $_SERVER["DOCUMENT_ROOT"]."/check_login.php";
 
-    error_log("Making wrong1")
+    error_log("Making wrong1");
 
     //Check that the answer isn't already wrong
     $stmt = $conn->prepare("SELECT shouldFlashWrong FROM game");
