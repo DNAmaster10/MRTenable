@@ -7,7 +7,7 @@
     include $_SERVER["DOCUMENT_ROOT"]."/check_login.php";
 
     //Check that round exists
-    $stmt = $conn->prepare("SELECT count(*) FROM game WHERE round=?");
+    $stmt = $conn->prepare("SELECT count(*) FROM game WHERE currentRound=?");
     $stmt->bind_param("i", $_GET["round"]);
     $stmt->execute();
     $stmt->bind_result($result);
