@@ -52,7 +52,7 @@ function revealAnswer(answer) {
                 document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
             }
             else if (data == "1") {
-                document.getElementById("answer_" = finalData[0] + "_container").classList.add("hidden");
+                document.getElementById("answer_" + finalData[0] + "_container").classList.add("hidden");
             }
         }
     });
