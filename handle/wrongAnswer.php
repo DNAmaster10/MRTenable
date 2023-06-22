@@ -14,6 +14,7 @@
         die();
     }
     unset($result);
+    error_log("Making Wrong");
 
     $stmt = $conn->prepare("UPDATE game SET shouldFlashWrong=1");
     $stmt->execute();
@@ -21,7 +22,7 @@
 
     //Wait for 2 seconds.
     sleep(3);
-
+    error_log("Making Right");
     $stmt = $conn->prepare("UPDATE game SET shouldFlashWrong=0");
     $stmt->execute();
     $stmt->close();
