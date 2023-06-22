@@ -15,6 +15,6 @@
     $stmt->bind_result($question);
     $stmt->fetch();
     $stmt->close();
-placeholder
+
     echo ($question);
 ?>
