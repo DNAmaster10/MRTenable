@@ -8,6 +8,7 @@
     </head>
     <div id="main_container">
         <h1 id="header_text">Tenable Answers</title>
+        <h2 id="question">Question: </h2>
         <div id="answers_container">
             <div id="answer_container_1" class="answer_container">
                 <p id="answer_1" class="answer"></p>
