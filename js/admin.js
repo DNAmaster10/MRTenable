@@ -46,14 +46,30 @@ function revealAnswer(answer) {
     $.ajax({
         url: "/handle/revealAnswer.php",
         type: "GET",
-        data: {answer:answer}
+        data: {answer:answer},
+        success: function(data) {
+            if (data == "0") {
+                document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
+            }
+            else if (data == "1") {
+                document.getElementById("answer_" = finalData[0] + "_container").classList.add("hidden");
+            }
+        }
     });
 }
 function hideAnswer(answer) {
     $.ajax({
         url: "/handle/hideAnswer.php",
         type: "GET",
-        data: {answer:answer}
+        data: {answer:answer},
+        success: function(data) {
+            if (data == "0") {
+                document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
+            }
+            else if (data == "1") {
+                document.getElementById("answer_" = finalData[0] + "_container").classList.add("hidden");
+            }
+        }
     });
 }
 
@@ -67,7 +83,12 @@ function getAnswers() {
             for (var i = 0; i < splitData.length; i++) {
                 finalData = splitData[i].split("---");
                 document.getElementById("answer_" + finalData[0] + "_container").className = "";
-                document.getElementById("answer_" + finalData[0] + "_container").classList.add(finalData[2]);
+                if (finalData[2] == "0") {
+                    document.getElementById("answer_" + finalData[0] + "_container").classList.add("shown");
+                }
+                else {
+                    document.getElementById("answer_" = finalData[0] + "_container").classList.add("hidden");
+                }
                 document.getElementById("answer_" + finalData[0]).innerHTML = finalData[1];
             }           
         }

@@ -4,6 +4,7 @@
     include $_SERVER["DOCUMENT_ROOT"]."/check_login.php";
 
     if (!isset($_GET["answer"])) {
+        echo ("error");
         die();
     }
 
@@ -25,6 +26,7 @@
     $stmt->bind_result($result);
     $stmt->fetch();
     if ($result < 1) {
+        echo ("error");
         die();
     }
     unset($result);
@@ -36,4 +38,5 @@
     $stmt->bind_param("ii", $currentRound, $_GET["answer"]);
     $stmt->execute();
     $stmt->close();
+    echo ("1");
 ?>
