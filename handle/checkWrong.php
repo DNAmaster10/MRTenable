@@ -7,5 +7,5 @@
     $stmt->fetch();
     $stmt->close();
 
-    echo ("" + $result);
+    echo ($result);
 ?>
