@@ -1,5 +1,4 @@
 .answer_container {
-    border: 1px solid black;
     text-align: center;
     margin: 10px;
     border-radius: 10px;
@@ -21,3 +20,7 @@
   .wrong {
     background-color: red;
   }
+body {
+  text-align: center;
+  font-family: Copperplate, fantasy;
+}
